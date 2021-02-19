@@ -2,7 +2,7 @@
   "name": "cogs120-project1",
   "description": "Serving static content via html files",
   "version": "0.0.1",
-  "author": "Kyle Burick <email@ucsd.edu>",
+  "author": "Kyle Burick <kburick@ucsd.edu>",
 
   "repository": {
   	"type": "git",
