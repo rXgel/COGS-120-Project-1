@@ -1,0 +1,20 @@
+{
+  "name": "cogs120-project1",
+  "description": "Serving static content via html files",
+  "version": "0.0.1",
+  "author": "Kyle Burick <email@ucsd.edu>",
+
+  "repository": {
+  	"type": "git",
+  	"url": "https://github.com/kyleburick/COGS-120-Project"
+  },
+  "license": "MIT",
+
+  "main": "server.js",
+  "dependencies": {
+    "express": "3.x"
+  },
+  "engines": {
+  	"node": "0.10.x"
+  }
+}
