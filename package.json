@@ -10,9 +10,14 @@
   },
   "license": "MIT",
 
+  "scripts": {
+    "start": "node app.js"
+  },
+
   "main": "server.js",
   "dependencies": {
-    "express": "3.x"
+    "express": "3.x",
+    "express3-handlebars": "*"
   },
   "engines": {
   	"node": "0.10.x"
