@@ -1,0 +1,20 @@
+{
+    "users": 
+    [
+        {
+            "name": "John Doe",
+            "projName": "COGS project"
+        }, 
+
+        {
+            "name": "Mary Jane",
+            "projName": "Set up personal online shop"
+        },
+
+        {
+            "name": "Bob Smith",
+            "projName": "Code a portfolio"
+        }
+    ]
+
+}
