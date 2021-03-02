@@ -19,12 +19,15 @@ body {
 }
 header {
   background: black;
-  height: 100vh;
+  height: 150vh;
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center center;
   position: relative;
 }
+
+
+/* navbar */
 .nav-area {
   float: right;
   list-style: none;
@@ -44,8 +47,74 @@ header {
 .nav-area li a:hover {
   background: #fff;
   color: #333;
+  transition: 0.4s;
 }
 
+/* Dropdown button */
+.dropbtn {
+  background-color: black;
+  border: 1px solid #fff;
+  color: white;
+  padding: 5px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 2px;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #fff;
+  color: #333;
+  transition: 0.4s;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-color: black;
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  color: #fff;
+}
+
+#myInput:focus {outline: none;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 50px;
+  overflow: auto;
+  z-index: 1;
+
+  background-color: black;
+  border: 1px solid #fff;
+}
+
+.dropdown-content a {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {
+  background-color: #fff;
+  color: black;
+  transition: 0.4s;
+}
+
+
+/* Welcome/landing text */
 .welcome-text {
   position: absolute;
   width: 600px;
@@ -80,11 +149,113 @@ header {
 
 .welcome-text input {
   border: 1px solid #fff;
-    padding: 10px 25px;
-    font-size: 14px;
+  padding: 10px 25px;
+  font-size: 14px;
   margin-top: 20px;
-    display: inline-block;
+  display: inline-block;
 }
+
+.welcome-text h2 {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+
+/* login text */
+.login-text {
+  position: absolute;
+  width: 600px;
+  height: 300px;
+  margin: 20% 30%;
+  text-align: center;
+  margin-top: 200px;
+}
+
+.login-text h1 {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 40px;
+}
+
+.login-text a {
+  border: 1px solid #fff;
+  padding: 10px 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-top: 20px;
+  display: inline-block;
+  color: #fff;
+}
+.login-text a:hover {
+  background: #fff;
+  color: #333;
+  transition: 0.4s;
+}
+
+.login-text input {
+  border: 1px solid #fff;
+  padding: 10px 25px;
+  font-size: 14px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.login-text .loginBtn {
+  border: 1px solid #fff;
+  padding: 10px 25px;
+  text-decoration: none;
+  font-size: 14px;
+  margin-top: 20px;
+  display: inline-block;
+  color: black;
+}
+
+
+/* Project dropdown button */
+#projInput {
+  background-color: black;
+  border: 1px solid #fff;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  height: 10px;
+  border: none;
+  color: #fff;
+}
+
+#projInput:focus {
+  outline: none;
+}
+
+.dropdown-content a {
+  border: none;
+  width: 100%;
+}
+
+.dropdown-content p {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  padding: 5px 16px;
+  text-decoration: none;
+  display: block;
+
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  display: inline-block;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.dropdown p:hover {
+  transition: none;
+}
+
 
 /*resposive*/
 @media (max-width:600px) {
@@ -112,55 +283,7 @@ header {
   }
 }
 
-.dropbtn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
 
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #3e8e41;
-}
-
-#myInput {
-  box-sizing: border-box;
-  background-image: url('searchicon.png');
-  background-position: 14px 12px;
-  background-repeat: no-repeat;
-  font-size: 16px;
-  padding: 14px 20px 12px 45px;
-  border: none;
-  border-bottom: 1px solid #ddd;
-}
-
-#myInput:focus {outline: 3px solid #ddd;}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f6f6f6;
-  min-width: 230px;
-  overflow: auto;
-  border: 1px solid #ddd;
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown a:hover {background-color: #ddd;}
 
 .show {display: block;}
 
