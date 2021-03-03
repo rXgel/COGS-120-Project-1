@@ -14,6 +14,7 @@ var notifications = require('./routes/notifications');
 var team = require('./routes/team');
 var about = require('./routes/about');
 var login = require('./routes/login');
+var newProj = require('./routes/newProj');
 // Example route
 // var user = require('./routes/user');
 
@@ -45,6 +46,7 @@ app.get('/notifications', notifications.view);
 app.get('/team', team.view);
 app.get('/about', about.view);
 app.get('/login', login.view);
+app.get('/new', newProj.view);
 // Example route
 // app.get('/users', user.list);
 
