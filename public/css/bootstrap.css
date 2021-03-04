@@ -257,6 +257,38 @@ header {
 }
 
 
+/* Notifications: Checkmark Options */
+.checkNotifs {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+
+/* Team */
+.team {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+.team a {
+  border: none;
+  display: inline-block;
+}
+
+.team a:hover {
+  transition: none;
+  color: #fff;
+  background-color: black;
+  text-decoration: none;
+}
+
+.team a:visited {
+  text-decoration: none;
+  color: #fff;
+}
+
+
+
 /*resposive*/
 @media (max-width:600px) {
   .wrapper {
@@ -282,6 +314,23 @@ header {
     font-size: 30px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
