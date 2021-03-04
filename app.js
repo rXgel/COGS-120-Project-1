@@ -15,6 +15,12 @@ var team = require('./routes/team');
 var about = require('./routes/about');
 var login = require('./routes/login');
 var newProj = require('./routes/newProj');
+var help = require('./routes/help');
+var blog = require('./routes/blog');
+var create = require('./routes/create');
+var subtasks = require('./routes/subtasks');
+var settings = require('./routes/settings');
+var support = require('./routes/support');
 // Example route
 // var user = require('./routes/user');
 
@@ -46,7 +52,13 @@ app.get('/notifications', notifications.view);
 app.get('/team', team.view);
 app.get('/about', about.view);
 app.get('/login', login.view);
-app.get('/new', newProj.view);
+app.get('/newProj', newProj.view);
+app.get('/help', help.view);
+app.get('/blog', blog.view);
+app.get('/create', create.view);
+app.get('/subtasks', subtasks.view);
+app.get('/settings', settings.view);
+app.get('/support', support.view);
 // Example route
 // app.get('/users', user.list);
 
