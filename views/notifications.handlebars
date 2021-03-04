@@ -25,6 +25,46 @@
           </div>
         </div>
       </div>
+
+<div class="welcome-text">
+    <h1>Notification Manager</h1>
+    <h2>Choose a project to manage its notifications</h2>
+    <div class="dropdown">
+      <button onclick="projDropdown()" class="dropbtn">Select Project</button>
+      {{#each data}}
+      <div id="projDropdown" class="dropdown-content">
+        <input type="text" placeholder="Search" id="projInput" onkeyup="filterFunction()">
+        <a href="#">{{projectName}}</a>
+      </div>
+      {{/each}}
+    </div>
+
+    <br><br><br>
+
+    <h2>Manage Notifications</h2>
+    <h2>{{projectName}}</h2>
+    <div class="checkNotifs">
+      <input type="checkbox" id="pushNotif" name="pushNotif" checked>
+      <label for="pushNotif">Push notifications</label>
+      </br>
+      <input type="checkbox" id="updates" name="updates" checked>
+      <label for="updates">Project updates</label>
+      </br>
+      <input type="checkbox" id="deadline" name="deadline" checked>
+      <label for="deadline">Deadline reminder</label>
+      </br>
+      <input type="checkbox" id="teamAdd" name="teamAdd" checked>
+      <label for="teamAdd">Team Member added you</label>
+      </br>
+      <input type="checkbox" id="teamReq" name="teamReq" checked>
+      <label for="teamReq">Team Member request to join</label>
+      </br>
+      <input type="checkbox" id="teamComplete" name="teamComplete" checked>
+      <label for="teamComplete">Team Member completed task</label>
+    </div>
+    
+</div>
+
 <script>
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
@@ -47,12 +87,28 @@ function filterFunction() {
     }
   }
 }
-</script>
-        </ul>
-    </div>
-<div class="welcome-text">
-    <h1>Notification Manager</h1>
-</header>
 
+/* Project selection dropdown */
+function projDropdown() {
+  document.getElementById("projDropdown").classList.toggle("show");
+}
+
+function filterFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("projInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("projDropdown");
+  a = div.getElementsByTagName("a");
+  for (i = 0; i < a.length; i++) {
+    txtValue = a[i].textContent || a[i].innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      a[i].style.display = "";
+    } else {
+      a[i].style.display = "none";
+    }
+  }
+}
+</script>
+</header>
 </body>
 </html>
