@@ -9,28 +9,22 @@
 <body>
     <header>
     <div class="wrapper">
-        
         <ul class="nav-area">
         <li><a href="/">Home</a></li>
         <li><a href="projects">Projects</a></li>
-        <li><a href="notifications">Notifications</a></li>
-        <li><a href="team">Team</a></li>
-        <li><a href="about">About</a></li>
         <li><a href="login">Login</a></li>
-        //<div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-  <div id="myDropdown" class="dropdown-content">
-    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-    <a href="about.html">About</a>
-    <a href="#base">Base</a>
-    <a href="#blog">Blog</a>
-    <a href="#contact">Contact</a>
-    <a href="#custom">Custom</a>
-    <a href="#support">Support</a>
-    <a href="#tools">Tools</a>
-  </div>
-//</div>
-
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Menu</button>
+          <div id="myDropdown" class="dropdown-content">
+            <input type="text" placeholder="Search" id="myInput" onkeyup="filterFunction()">
+            <a href="about.handlebars">About</a>
+            <a href="#blog">Blog</a>
+            <a href="#settings">Settings</a>
+            <a href="#support">Support</a>
+            <a href="#team">Team</a>
+          </div>
+        </div>
+      </div>
 <script>
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
@@ -56,14 +50,18 @@ function filterFunction() {
 </script>
         </ul>
     </div>
+{{#each data}}
 <div class="login-text">
-    <h1>Login</h1>
-    <input type="text" class="loginBtn" id="loginName" name="loginName" value="Enter email">
-    <br>
-    <a href="new.html">Log in</a>
-    <br>
-    <a href="help.html" class="helpLink">Help</a>
-    </div>
+  <h1>Login</h1>
+  <input type="text" class="loginBtn" id="loginName" name="loginName" value="{{email}}">
+  <br>
+  <input type="password" class="pwdBtn" id="pwd" name="pwd" value="{{password}}">
+  <br>
+  <a href="projects.handlebars">Log in</a>
+  <br>
+  <a href="help.handlebars" class="helpLink">Help</a>
+</div>
+{{/each}}
 </header>
 
 </body>

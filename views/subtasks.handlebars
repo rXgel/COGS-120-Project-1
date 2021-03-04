@@ -12,28 +12,22 @@
     <h1>Subtasks</h1>
 </header>
 <div class="wrapper">
-        
         <ul class="nav-area">
         <li><a href="/">Home</a></li>
         <li><a href="projects">Projects</a></li>
-        <li><a href="notifications">Notifications</a></li>
-        <li><a href="team">Team</a></li>
-        <li><a href="about">About</a></li>
         <li><a href="login">Login</a></li>
-        //<div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-  <div id="myDropdown" class="dropdown-content">
-    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-    <a href="about.html">About</a>
-    <a href="#base">Base</a>
-    <a href="#blog">Blog</a>
-    <a href="#contact">Contact</a>
-    <a href="#custom">Custom</a>
-    <a href="#support">Support</a>
-    <a href="#tools">Tools</a>
-  </div>
-//</div>
-
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">Menu</button>
+          <div id="myDropdown" class="dropdown-content">
+            <input type="text" placeholder="Search" id="myInput" onkeyup="filterFunction()">
+            <a href="about.handlebars">About</a>
+            <a href="#blog">Blog</a>
+            <a href="#settings">Settings</a>
+            <a href="#support">Support</a>
+            <a href="#team">Team</a>
+          </div>
+        </div>
+      </div>
 <script>
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
