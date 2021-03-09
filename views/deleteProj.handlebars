@@ -19,7 +19,7 @@
         <input type="text" placeholder="Search" id="myInput" onkeyup="filterFunction()">
         <a href="about">About</a>
         <a href="blog">Blog</a>
-        <a href="settings">Settings</a>
+        <a href="notifications">Settings</a>
         <a href="support">Support</a>
         <a href="team">Team</a>
       </div>
@@ -83,11 +83,7 @@ function deleteProj(){
     });
     $("#projDropdown").html(select); 
 
-    alert("Your project has been deleted");
-  }
-}
-
-  /*//if user input is correct project name, delete; else, wrong
+/*  //if user input is correct project name, delete; else, wrong
   if(prompt == data.value){
     $("#proj").remove();
   } else {
