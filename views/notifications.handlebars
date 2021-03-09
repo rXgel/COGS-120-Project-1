@@ -42,6 +42,7 @@
     <br><br><br>
 
     <h2>Manage Notifications</h2>
+    <p>Changes are automatically saved</p>
     <h2>{{projectName}}</h2>
     <div class="checkNotifs">
       <input type="checkbox" id="pushNotif" name="pushNotif" checked>
@@ -53,6 +54,9 @@
       <input type="checkbox" id="deadline" name="deadline" checked>
       <label for="deadline">Deadline reminder</label>
       </br>
+      <input type="checkbox" id="subtaskAdd" name="subtaskAdd" checked>
+      <label for="subtaskAdd">Subtask added or removed</label>
+      </br>
       <input type="checkbox" id="teamAdd" name="teamAdd" checked>
       <label for="teamAdd">Team Member added you</label>
       </br>
@@ -62,6 +66,10 @@
       <input type="checkbox" id="teamComplete" name="teamComplete" checked>
       <label for="teamComplete">Team Member completed task</label>
     </div>
+
+
+    <br><br>
+    <a href="newProj" class="dropbtn">back</a>
     
 </div>
 
@@ -109,8 +117,6 @@ function filterFunction() {
   }
 }
 </script>
-<br><br>
-    <a href="newProj" class="dropbtn">back</a>
 </header>
 </body>
 </html>

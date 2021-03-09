@@ -19,7 +19,7 @@
         <input type="text" placeholder="Search" id="myInput" onkeyup="filterFunction()">
         <a href="about">About</a>
         <a href="blog">Blog</a>
-        <a href="settings">Settings</a>
+        <a href="notifications">Settings</a>
         <a href="support">Support</a>
         <a href="team">Team</a>
       </div>
@@ -93,13 +93,21 @@ function addSubtask(){
     </div>
 
     <br><br><br>
-    <h2>Please Add subtask: <br> {{projectName}}</h2>
+    <h2>Current subtasks:</h2>
+    <h3>Subtask 1</h3>
+    <p>Deadline: March 10, 2021</p>
+    <br>
+    <h3>Subtask 2</h3>
+    <p>Deadline: March 11, 2021</p>
+
+    <br><br>
+    <h2>Add a subtask: <br> {{projectName}}</h2>
     <input type="text" id="inputProjName" name="fname" value="Enter subtask">
     <br><br>
     <h2>Deadline:</h2>
     <input type="date" id="date" name="deadline-date" value="03-04-2021" min="2021-01-01" max="2025-12-31">
     <br><br>
-    <button onclick="addSubtask()" class="dropbtn">Add</button>
+    <button onclick="addSubtask()" class="dropbtnAdd">Add</button>
     <br><br>
     <a href="newProj" class="dropbtn">back</a>
 </header>
