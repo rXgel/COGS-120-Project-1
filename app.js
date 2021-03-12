@@ -2,7 +2,7 @@
 /**
  * Module dependencies.
  */
-
+const Datastore = require('nedb');
 var express = require('express');
 var http = require('http');
 var path = require('path');
@@ -34,7 +34,7 @@ app.engine('handlebars', handlebars());
 app.set('view engine', 'handlebars');
 app.use(express.favicon());
 app.use(express.logger('dev'));
-app.use(express.json());
+app.use(express.json({limit: '1mb'})); //Protecting the server from being flooded by data
 app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(express.cookieParser('IxD secret key'));
@@ -61,6 +61,16 @@ app.get('/create', create.view);
 app.get('/subtasks', subtasks.view);
 app.get('/settings', settings.view);
 app.get('/support', support.view);
+
+const database = new Datastore('public/data/database.db')
+database.loadDatabase();
+
+app.post('/api', (request, response) => {
+	console.log('I got a request!');
+	console.log(request.body);
+	database.insert(request.body);
+	response.end();
+});
 // Example route
 // app.get('/users', user.list);
 
