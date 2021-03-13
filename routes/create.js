@@ -1,8 +1,10 @@
 
 /*
- * GET create page.
+ * GET home page.
  */
 
+var data = require("../data.json");
+
 exports.view = function(req, res){
-  res.render('create');
+  res.render('create', data);
 };

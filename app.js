@@ -64,11 +64,28 @@ app.get('/support', support.view);
 
 const database = new Datastore('public/data/database.db')
 database.loadDatabase();
-
 app.post('/api', (request, response) => {
 	console.log('I got a request!');
 	console.log(request.body);
 	database.insert(request.body);
+	response.end();
+});
+
+const users = new Datastore('public/data/users.db')
+database.loadDatabase();
+app.post('/users', (request, response) => {
+	console.log('I got a request!');
+	console.log(request.body);
+	users.insert(request.body);
+	response.end();
+});
+
+const requests = new Datastore('public/data/requests.db')
+database.loadDatabase();
+app.post('/requests', (request, response) => {
+	console.log('I got a request!');
+	console.log(request.body);
+	requests.insert(request.body);
 	response.end();
 });
 // Example route
