@@ -4,7 +4,10 @@
 <meta charset="UTF-8">
     <title>Projects</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <link href="/css/bootstrap.css" rel="stylesheet">   
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="/js/projects.js"></script>
+    <link href="/css/bootstrap.css" rel="stylesheet">
+
 </head>
 <body>
 <header>
@@ -28,19 +31,36 @@
 
 <div class="welcome-text">
     <h1>Project Selection</h1>
+
     <br>
-    <div class="dropdown">
-      <button onclick="projDropdown()" class="dropbtn">Select Project</button>
-      {{#each data}}
-      <div id="projDropdown" class="dropdown-content">
-        <input type="text" placeholder="Search" id="projInput" onkeyup="filterFunction()">
-        <a href="create">{{projectName}}</a>
-        <a href="newProj">Make new project</a>
-      </div>
-      {{/each}}
-    </div>
+    <a href="newProj">Make new project</a>
+
     <br>
     <a href="subtasks">Manage Subtasks</a>
+
+    <br><br>
+    <h4>Project Name:</h4>
+    <div class="dropdown">
+      <button id="changeName" onclick="projDropdown()" class="dropbtn">Select Project</button>
+      <div id="projDropdown" class="dropdown-content">
+        <input type="text" placeholder="Search" id="projInput" onkeyup="filterFunction()">
+      </div>
+    </div>
+
+    <br><br>
+    <h4>Deadline:</h4>
+    <div id="Deadline">
+    </div>
+
+    <br>
+    <h4>Topic:</h4>
+    <div id="Topic">
+    </div>
+
+    <br>
+    <h4>Subtasks:</h4>
+    <div id="Subtasks">
+    </div>
 </div>
 
 <script>

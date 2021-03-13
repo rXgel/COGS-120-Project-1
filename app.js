@@ -62,17 +62,31 @@ app.get('/subtasks', subtasks.view);
 app.get('/settings', settings.view);
 app.get('/support', support.view);
 
+//Projects Database
 const database = new Datastore('public/data/database.db')
 database.loadDatabase();
+
+app.get('/api', (request, response) => {
+	database.find({}, (err, data) => {
+		if (err) {
+			response.end();
+			return;
+		}
+		response.json(data);
+	})
+});
+
 app.post('/api', (request, response) => {
 	console.log('I got a request!');
 	console.log(request.body);
 	database.insert(request.body);
-	response.end();
+	response.json(data);
 });
 
+//Users Database
 const users = new Datastore('public/data/users.db')
-database.loadDatabase();
+users.loadDatabase();
+
 app.post('/users', (request, response) => {
 	console.log('I got a request!');
 	console.log(request.body);
@@ -80,14 +94,17 @@ app.post('/users', (request, response) => {
 	response.end();
 });
 
+//Requests Database
 const requests = new Datastore('public/data/requests.db')
-database.loadDatabase();
+requests.loadDatabase();
+
 app.post('/requests', (request, response) => {
 	console.log('I got a request!');
 	console.log(request.body);
 	requests.insert(request.body);
 	response.end();
 });
+
 // Example route
 // app.get('/users', user.list);
 
