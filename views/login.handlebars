@@ -5,6 +5,9 @@
     <title>Login</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link href="/css/bootstrap.css" rel="stylesheet">  
+
+    {{> facebook}}
+    <script src="/public/js/facebook.js"></script>
 </head>
 <body>
     <header>
@@ -58,6 +61,10 @@ function filterFunction() {
   <input type="password" class="pwdBtn" id="pwd" name="pwd" value="{{password}}">
   <br>
   <a href="projects">Log in</a>
+  <!-- Facebook Login -->
+  <p class="facebookLogin">Log in with Facebook</p>
+  <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+  </fb:login-button>  
   <br>
   <a href="create">Register</a>
 </div>
