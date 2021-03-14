@@ -47,14 +47,7 @@
     <br><br><br>
     <h2>Current subtasks:</h2>
     <h3>Subtask 1</h3>
-    <div id="Deadline">
-      <div id="dateSelector">
-        <h3>Deadline:</h3>
-        {{#each data}}
         <p>{{subtaskDeadline}}</p>
-        {{/each}}
-      </div>
-    </div>
 
     <br><br>
     <h2>Add a subtask: <br> {{projectName}}</h2>
@@ -119,8 +112,8 @@ function addSubtask(){
   //var projName = $("#changeName").projName;
   var projName = $("#projInput").projName;
   var subtask = [];
-  alert("Your subtask has been added to " + projName);
-  subtask.append(projName);
+  alert("Your subtask has been added to " + $("#changeName"));
+  subtask.push($("inputSubtask");
 
 
   /*var input = document.getElementById('inputSubtask').value;
