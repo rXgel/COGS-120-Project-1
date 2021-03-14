@@ -5,9 +5,9 @@
     <title>Login</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link href="/css/bootstrap.css" rel="stylesheet">  
-
+    <script src="/js/facebook.js"></script>
     {{> facebook}}
-    <script src="/public/js/facebook.js"></script>
+    <script src="/js/facebook.js"></script>
 </head>
 <body>
     <header>
@@ -55,7 +55,7 @@ function filterFunction() {
     </div>
 {{#each data}}
 <div class="login-text">
-  <h1>Login</h1>
+  <h1 id="name">Login</h1>
   <input type="text" class="loginBtn" id="loginName" name="loginName" value="{{email}}">
   <br>
   <input type="password" class="pwdBtn" id="pwd" name="pwd" value="{{password}}">
@@ -65,6 +65,8 @@ function filterFunction() {
   <p class="facebookLogin">Log in with Facebook</p>
   <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
   </fb:login-button>  
+  <div id="status"></div>
+
   <br>
   <a href="create">Register</a>
 </div>
