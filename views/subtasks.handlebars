@@ -39,38 +39,73 @@
       <div id="projDropdown" class="dropdown-content">
         <input type="text" placeholder="Search" id="projInput" onkeyup="filterFunction()">
         {{#each data}}
-        <a href="#">{{projectName}}</a>
+        <a>{{projectName}}</a>
         {{/each}}
       </div>
     </div>
 
     <br><br><br>
+    {{#each subtasks}}
     <h2>Current subtasks:</h2>
-    <h3>Subtask 1</h3>
-    <div id="Deadline">
-      <div id="dateSelector">
-        <h3>Deadline:</h3>
-        {{#each data}}
-        <p>{{subtaskDeadline}}</p>
-        {{/each}}
-      </div>
-    </div>
+    {{subtaskName}}
+    <br>
+    <p>Deadline:</p>
+    {{deadlineSub}}
+    {{/each}}
+
 
     <br><br>
     <h2>Add a subtask: <br> {{projectName}}</h2>
-    <input type="text" id="inputSubtask" name="subtaskName" value="Enter subtask">
-    <div id="newSubtasks">
+    <input type="text" id="inputSubtask" name="subtaskName" placeholder="Enter subtask">
+    <br><br>
+    <div id="dateSelector">
+      <h2>Deadline:</h2>
+      <input type="text" id="dateinput" placeholder="click to select date">
     </div>
+    <br>
+    <br>
+    <h2>Suggested subtask:</h2>
+    <div class="suggest" id="suggest">
+      {{#each subtasks}}
+      {{suggestions}}
+      {{/each}}
+      <button onclick="addSubtask()" class="dropbtnAdd" id="addSub">Add</button>
+      <button onclick="ignore()" class="dropbtn" id="ignore">Skip</button> -->
+    
+    <br><br><br>
+    <button onclick="addSubtask()" class="dropbtnAdd" id="addSub">Add</button>
     <br><br>
-    <h2>Deadline:</h2>
-    <input type="date" id="date" name="deadline-date" value="03-04-2021" min="2021-01-01" max="2025-12-31">
-    <br><br>
-    <button onclick="addSubtask()" class="dropbtnAdd">Add</button>
+    <button onclick="delSubtask()" class="dropbtnDel" id="delSub">Delete</button>
     <br><br>
     <a href="newProj" class="dropbtn">back</a>
 </div>
 
 <script>
+/* subtask add */
+function addSubtask(){
+  $("#addSub").click(function(){
+    var input = $("#inputSubtask").val();
+    alert("Subtask added!");
+  });
+} 
+
+// var today = new Date();
+$("#dateinput").datepicker({
+  numberOfMonths:1,
+  changeYear:true,
+  changeMonth:true,
+  showOtherMonths: true,
+  minDate: new Date()
+});
+
+function ignore(){
+  $(document).ready(function(){
+    $("#ignore").click(function(){
+      $("#suggest").hide();
+    });
+  });
+}
+
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function myFunction() {
@@ -115,22 +150,17 @@ function filterFunction() {
 }
 
 /* Add button */
-function addSubtask(){
+/*function addSubtask(){
   //var projName = $("#changeName").projName;
   var projName = $("#projInput").projName;
   var subtask = [];
-  alert("Your subtask has been added to " + projName);
-  subtask.append(projName);
+  alert("Your subtask has been added to " + $("#changeName"));
+  subtask.push($("inputSubtask");
 
 
   /*var input = document.getElementById('inputSubtask').value;
-  alert("Your subtask has been added to " + input);*/
-}
-
-function changeName(text){
-  var text = document.getElementById("projectName");
-  $(projDropdown).text(text);
-}
+  alert("Your subtask has been added to " + input);
+} */
 </script>
 </header>
 </body>

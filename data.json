@@ -2,9 +2,9 @@
 	"data": [
 		{
 			"name": "John Doe",
-			"email": "johndoe@email.com",
+			"email": "jessicaM@email.com",
 			"password": "cogs120",
-            "projectName": "Code COGS project"
+			"projectName": "Learn to cook new recipes"
 		},
 		
 		{
@@ -18,7 +18,7 @@
 			"name": "Bob Smith",
 			"email": "bobsmith@email.com",
 			"password": "randompassword",
-            "projectName": "Prototype deliverables"		
+            "projectName": "COGS 120 project"		
 		}
 	]
 }
