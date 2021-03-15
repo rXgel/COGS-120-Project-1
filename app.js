@@ -15,6 +15,7 @@ var team = require('./routes/team');
 var about = require('./routes/about');
 var deleteProj = require('./routes/deleteProj');
 var login = require('./routes/login');
+var facebook = require('./routes/facebook');
 var newProj = require('./routes/newProj');
 var blog = require('./routes/blog');
 var create = require('./routes/create');
@@ -59,6 +60,7 @@ app.get('/create', create.view);
 app.get('/subtasks', subtasks.view);
 app.get('/settings', settings.view);
 app.get('/support', support.view);
+app.get('/facebook', facebook.view);
 
 //Projects Database
 const database = new Datastore('public/data/database.db')
