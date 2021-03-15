@@ -1,0 +1,15 @@
+{
+    "subtasks": [
+        {
+            "subtaskName": "Make dev plan",
+            "deadlineSub": "March 10, 2021",
+            "suggestions": "Check calendar for planning"
+        },
+
+        {
+            "subtaskName": "Code HTML",
+            "deadlineSub": "March 12, 2021",
+            "suggestions": "Read and write files for HTML"
+        }
+    ]
+}
